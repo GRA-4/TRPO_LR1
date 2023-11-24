@@ -1,0 +1,211 @@
+﻿<Window x:Class="TRPO_LR1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TRPO_LR1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="560" Width="440" >
+    <Window.DataContext>
+        <local:States />
+    </Window.DataContext>
+    <Window.Resources>
+        <ImageBrush x:Key="LargeBottleTexture" x:Name="LargeBottleTexture" ImageSource="/Bottle_Large.png"/>
+        <ImageBrush x:Key="MediumBottleTexture" x:Name="MediumBottleTexture" ImageSource="/Bottle_Medium.png"/>
+        <ImageBrush x:Key="SmallBottleTexture" x:Name="SmallBottleTexture" ImageSource="/Bottle_Small.png"/>
+    </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="https://preview.free3d.com/img/2015/04/2399351227658798376/hsx6xea1.jpg"/>
+    </Window.Background>
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="300" HorizontalAlignment="Left">
+                <Grid.Background>
+                    <ImageBrush ImageSource="https://avantashop.spb.ru/images/catalog/products/4031/7510-MCM%200028003G.jpg"/>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="20"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="20"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Row="1" Grid.Column="1" VerticalAlignment="Top">
+                    <StackPanel>
+
+                        <StackPanel Margin="5,20" Height="120" Orientation="Horizontal">
+                            <StackPanel.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" SpreadMethod="Pad" MappingMode="RelativeToBoundingBox">
+                                    <GradientStop Color="#FFC8B3B3" Offset="0.343"/>
+                                    <GradientStop Color="#FF7D7272" Offset="0.173"/>
+                                    <GradientStop Color="#FF7F7676" Offset="0.869"/>
+                                </LinearGradientBrush>
+                            </StackPanel.Background>
+                            <StackPanel Width="90" Height="90" HorizontalAlignment="Left" Margin="10">
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Width="20" Margin="5" Height="20" x:Name="SmallButton" Click="SmallButton_Click" FontFamily="Courier New" FontSize="18" FontWeight="ExtraBlack">
+                                        <Button.BorderBrush>
+                                            <SolidColorBrush Color="#FF272727"></SolidColorBrush>
+                                        </Button.BorderBrush>
+                                        <Button.Resources>
+                                            <Style TargetType="Border">
+                                                <Setter Property="CornerRadius" Value="10"/>
+                                            </Style>
+                                        </Button.Resources>
+                                        <Button.Background>
+                                            <ImageBrush ImageSource="/Water_Dispenser_Metal_Texture.png" Stretch="Fill">
+                                                <ImageBrush.RelativeTransform>
+                                                    <TransformGroup>
+                                                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                                        <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                                        <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                                                        <TranslateTransform/>
+                                                    </TransformGroup>
+                                                </ImageBrush.RelativeTransform>
+                                            </ImageBrush>
+                                        </Button.Background> 5</Button>
+                                    <Button Width="20" Margin="5" Height="20" x:Name="MediumButton" Click="MediumButton_Click" FontFamily="Courier New" FontSize="14" FontWeight="ExtraBlack">
+                                        <Button.BorderBrush>
+                                            <SolidColorBrush Color="#FF272727"></SolidColorBrush>
+                                        </Button.BorderBrush>
+                                        <Button.Resources>
+                                            <Style TargetType="Border">
+                                                <Setter Property="CornerRadius" Value="10"/>
+                                            </Style>
+                                        </Button.Resources>
+                                        <Button.Background>
+                                            <ImageBrush ImageSource="/Water_Dispenser_Metal_Texture.png" Stretch="Fill">
+                                                <ImageBrush.RelativeTransform>
+                                                    <TransformGroup>
+                                                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                                        <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                                        <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                                                        <TranslateTransform/>
+                                                    </TransformGroup>
+                                                </ImageBrush.RelativeTransform>
+                                            </ImageBrush>
+                                        </Button.Background> 
+                                    10</Button>
+                                    <Button Width="20" Margin="5" Height="20" x:Name="LargeButton" Click="LargeButton_Click" FontFamily="Courier New" FontSize="14" FontWeight="ExtraBlack">
+                                        <Button.BorderBrush>
+                                            <SolidColorBrush Color="#FF272727"></SolidColorBrush>
+                                        </Button.BorderBrush>
+                                        <Button.Resources>
+                                            <Style TargetType="Border">
+                                                <Setter Property="CornerRadius" Value="10"/>
+                                            </Style>
+                                        </Button.Resources>
+                                        <Button.Background>
+                                            <ImageBrush ImageSource="/Water_Dispenser_Metal_Texture.png" Stretch="Fill">
+                                                <ImageBrush.RelativeTransform>
+                                                    <TransformGroup>
+                                                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                                        <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                                        <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                                                        <TranslateTransform/>
+                                                    </TransformGroup>
+                                                </ImageBrush.RelativeTransform>
+                                            </ImageBrush>
+                                        </Button.Background> 19
+                                    </Button>
+
+                                </StackPanel>
+                                <!--литры-->
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Width="20" Margin="5" Height="20" x:Name="AcceptButton" Click="AcceptButton_Click"  FontFamily="Courier New" FontSize="14" FontWeight="ExtraBlack">
+                                        <Button.BorderBrush>
+                                            <SolidColorBrush Color="#FF272727"></SolidColorBrush>
+                                        </Button.BorderBrush>
+                                        <Button.Resources>
+                                            <Style TargetType="Border">
+                                                <Setter Property="CornerRadius" Value="10"/>
+                                            </Style>
+                                        </Button.Resources>
+                                        <Button.Background>
+                                            <ImageBrush ImageSource="/Water_Dispenser_Metal_Texture.png" Stretch="Fill">
+                                                <ImageBrush.RelativeTransform>
+                                                    <TransformGroup>
+                                                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                                        <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                                        <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                                                        <TranslateTransform/>
+                                                    </TransformGroup>
+                                                </ImageBrush.RelativeTransform>
+                                            </ImageBrush>
+                                        </Button.Background>
+                                        y</Button>
+                                </StackPanel>
+                                <!--да/нет-->
+                                <Button Background="#FF464242" x:Name="CardRecieverButton" Click="CardRecieverButton_Click">
+                                    <Grid Height="20" >
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition ></RowDefinition>
+                                            <RowDefinition Height="2"></RowDefinition>
+                                            <RowDefinition ></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition ></ColumnDefinition>
+                                            <ColumnDefinition Width="50"></ColumnDefinition>
+                                            <ColumnDefinition ></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <StackPanel Background="Black" Grid.Column="1" Grid.Row="1"></StackPanel>
+                                    </Grid>
+                                </Button>
+                            </StackPanel>
+                            <StackPanel>
+                                <StackPanel Margin="5" Background="DarkSlateGray">
+                                    <TextBox Width="120" Height="60" FontSize="12" TextWrapping="Wrap" Foreground="White" x:Name="DisplayTextBox" Text="{Binding CurrentMessage, UpdateSourceTrigger=PropertyChanged}" AllowDrop="False" Focusable="False">
+                                        <TextBox.Background>
+                                            <ImageBrush ImageSource="https://i.imgur.com/NFc1CXK.jpg"/>
+                                        </TextBox.Background>
+                                    </TextBox>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Height="200" >
+                            <StackPanel.Background>
+                                <ImageBrush ImageSource="/Water_Dispenser_Metal_Texture.png">
+                                    <ImageBrush.RelativeTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                            <RotateTransform Angle="180" CenterX="0.5" CenterY="0.5"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </ImageBrush.RelativeTransform>
+                                </ImageBrush>
+                            </StackPanel.Background>
+                            <StackPanel Height="180" Width="160" Margin="50,10" >
+                                <Grid Margin="0,10,0,0">
+                                    <Rectangle Width="100" Height="140" x:Name="SelectedSmallBottleRectangle" MouseUp="SmallBottleRectangle_MouseUp" Fill="{StaticResource SmallBottleTexture}" Visibility="Collapsed" />
+
+                                    <Rectangle Width="100" Height="140" x:Name="SelectedMediumBottleRectangle" MouseUp="MediumBottleRectangle_MouseUp" Fill="{StaticResource MediumBottleTexture}" Visibility="Collapsed" />
+
+                                    <Rectangle Width="100" Height="140" x:Name="SelectedLargeBottleRectangle" MouseUp="LargeBottleRectangle_MouseUp" Fill="{StaticResource LargeBottleTexture}" Visibility="Collapsed" />
+                                </Grid>
+                                <StackPanel.Background>
+                                    <ImageBrush ImageSource="/Wster_Dispenser.png"/>
+                                </StackPanel.Background>
+
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+            <StackPanel>
+                <StackPanel Margin="10">
+                    <Rectangle Width="45" Height="60" Fill="#FFDC7F7F" x:Name="CardRectangle" MouseUp="CardRectangle_MouseUp"/>
+                </StackPanel>
+                <Rectangle Width="100" Height="140" x:Name="SmallBottleRectangle" MouseUp="SmallBottleRectangle_MouseUp" Fill="{StaticResource SmallBottleTexture}" />
+
+                <Rectangle Width="100" Height="140" x:Name="MediumBottleRectangle" MouseUp="MediumBottleRectangle_MouseUp" Fill="{StaticResource MediumBottleTexture}" />
+
+                <Rectangle Width="100" Height="140" x:Name="LargeBottleRectangle" MouseUp="LargeBottleRectangle_MouseUp" Fill="{StaticResource LargeBottleTexture}" />
+
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

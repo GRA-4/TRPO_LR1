@@ -1,0 +1,20 @@
+﻿<Window x:Class="TRPO_LR1.ErrorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TRPO_LR1"
+        mc:Ignorable="d"
+        Title="ErrorWindow" Height="250" Width="600">
+    <Grid>
+        <StackPanel Margin="10">
+            <StackPanel Orientation="Horizontal">
+                <Grid Height="200" Width="200">
+                    <Image Source="https://images.genius.com/a3c775785c08bb746278232194792f6d.750x750x1.jpg"  Visibility="Collapsed" x:Name="MonkeyImage" /> 
+                    <Image Source="/Angry_emotion.png"  Visibility="Collapsed" x:Name="AngryImage" />
+                    <Image Source="https://images.genius.com/a3c775785c08bb746278232194792f6d.750x750x1.jpg" Visibility="Collapsed"/>
+                </Grid>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

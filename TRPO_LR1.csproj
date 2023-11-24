@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Angry_emotion.png" />
+    <None Remove="Bottle_Large.png" />
+    <None Remove="Bottle_Medium.png" />
+    <None Remove="Bottle_Small.png" />
+    <None Remove="Water_Dispenser_Metal_Texture.png" />
+    <None Remove="Wster_Dispenser.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Angry_emotion.png" />
+    <Resource Include="Bottle_Large.png" />
+    <Resource Include="Bottle_Medium.png" />
+    <Resource Include="Bottle_Small.png" />
+    <Resource Include="Water_Dispenser_Metal_Texture.png" />
+    <Resource Include="Wster_Dispenser.png" />
+  </ItemGroup>
+
+</Project>
